@@ -13,7 +13,7 @@ const ConfirmationModal = ({ isModalOpen, closeModal, data }) => {
             </div>
 
             <div className="container mx-auto mt-4">
-                <p className="">Thank you for your booking! Your package for India has been confirmed. Here are the details:</p>
+                <p className="">Thank you for your booking! Your package for {data.place} has been confirmed. Here are the details:</p>
                 <div className="mt-2">
                     <p className="my-1 font-semibold">Name : <span className="font-normal">{data?.fullName}</span></p>
                     <p className="my-1 font-semibold">Phone : <span className="font-normal">{data?.phoneNumber}</span></p>
