@@ -15,13 +15,13 @@ const ConfirmationModal = ({ isModalOpen, closeModal, data }) => {
             <div className="container mx-auto mt-4">
                 <p className="">Thank you for your booking! Your package for India has been confirmed. Here are the details:</p>
                 <div className="mt-2">
-                    <p className="my-1 font-semibold">Name : <span className="font-normal">{data?.fullname}</span></p>
-                    <p className="my-1 font-semibold">Phone : <span className="font-normal">9075467159</span></p>
-                    <p className="my-1 font-semibold">Place : <span className="font-normal">United States</span></p>
-                    <p className="my-1 font-semibold">Persons : <span className="font-normal">3</span></p>
-                    <p className="my-1 font-semibold">Start Date : <span className="font-normal">22/12/2023</span></p>
-                    <p className="my-1 font-semibold">End Date : <span className="font-normal">31/12/2023</span></p>
-                    <p className="my-1 font-semibold">Description : <span className="font-normal">At Travel, excellence is not just a goal; it's a standard. We continuously strive to exceed your expectations by staying ahead of industry trends, partnering with reputable establishments, and leveraging technology to enhance your booking experience.</span></p>
+                    <p className="my-1 font-semibold">Name : <span className="font-normal">{data?.fullName}</span></p>
+                    <p className="my-1 font-semibold">Phone : <span className="font-normal">{data?.phoneNumber}</span></p>
+                    <p className="my-1 font-semibold">Place : <span className="font-normal">{data.place}</span></p>
+                    <p className="my-1 font-semibold">Persons : <span className="font-normal">{data.persons}</span></p>
+                    <p className="my-1 font-semibold">Start Date : <span className="font-normal">{data.startDate}</span></p>
+                    <p className="my-1 font-semibold">End Date : <span className="font-normal">{data.endDate}</span></p>
+                    <p className="my-1 font-semibold">Description : <p className="font-normal">{data.description}</p></p>
                 </div>
                 <p className="text-orange-700 mt-4">We are always happy to help you. For queries contact us on 1008-342-232 / 1008-454-464</p>
             </div>

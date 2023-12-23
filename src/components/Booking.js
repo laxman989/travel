@@ -69,8 +69,8 @@ const Booking = () => {
         
         if(Object.keys(newError).length === 0) {
             const userData = JSON.parse(localStorage.getItem("travelAuthToken"));
-            setBookingData({});
-            console.log(userData, formData);
+            setBookingData({...formData, ...userData});
+            console.log(bookingData);
             setFormData({
                 place: "",
                 persons: "",
@@ -109,16 +109,16 @@ const Booking = () => {
                             <label htmlFor="place" className="block text-gray-600">Place to Visit</label>
                             <select id="place" name="place" className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900" value={formData.place} onChange={handleChange}>
                                 <option className="text-gray-400" value="">Select Place to Visit</option>
-                                <option value="japan">Japan</option>
-                                <option value="unitedStates">United States</option>
-                                <option value="india">India</option>
-                                <option value="italy">Italy</option>
-                                <option value="germany">Germany</option>
-                                <option value="singapore">Singapore</option>
-                                <option value="china">China</option>
-                                <option value="indonesia">Indonesia</option>
-                                <option value="malaysia">Malaysia</option>
-                                <option value="australia">Australia</option>
+                                <option value="Japan">Japan</option>
+                                <option value="United States">United States</option>
+                                <option value="India">India</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="China">China</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Australia">Australia</option>
                             </select>
                             <span className="text-red-500">{formError.place}</span>
                         </div>
