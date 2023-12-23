@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Home CSS */
+.home {
+    background-size: cover;
+    animation: country-bg-animate 10s infinite ease-in-out;
+  }
+  
+  .home > .home-content {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .country-name::after {
+    content: "";
+    animation: country-name-animate 10s infinite ease-in-out;
+  }
+  
+  @keyframes country-name-animate {
+    0%,
+    25% {
+      content: "United States";
+    }
+  
+    26%,
+    50% {
+      content: "India";
+    }
+  
+    51%,
+    75% {
+      content: "Germany";
+    }
+  
+    76%,
+    100% {
+      content: "Japan";
+    }
+  }
+  
+  @keyframes country-bg-animate {
+    0%,
+    25% {
+      background: url("https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center;
+      background-size: cover;
+    }
+  
+    26%,
+    50% {
+      background: url("https://images.pexels.com/photos/5447440/pexels-photo-5447440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center;
+      background-size: cover;
+    }
+  
+    51%,
+    75% {
+      background: url("https://images.pexels.com/photos/1963082/pexels-photo-1963082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center;
+      background-size: cover;
+    }
+  
+    76%,
+    100% {
+      background: url("https://images.pexels.com/photos/1822605/pexels-photo-1822605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center;
+      background-size: cover;
+    }
+  }
