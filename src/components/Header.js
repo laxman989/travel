@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 import RegisterModal from "./RegisterModal";
@@ -13,6 +13,10 @@ const Header = () => {
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    useEffect(() => {
+        JSON.parse(localStorage.getItem('travelAuthToken')) && setUserData(JSON.parse(localStorage.getItem('travelAuthToken')))
+    }, [])
 
     return <>
         <nav className="w-full h-[10vh] bg-slate-900 text-slate-50">
