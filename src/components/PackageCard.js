@@ -13,7 +13,7 @@ const PackageCard = ({ data }) => {
                 <div className="flex gap-1 my-2">
                     <StarRating rating={data.rating} />
                 </div>
-                <button className="bg-slate-900 text-slate-50 px-3 py-2 rounded-md">View Detail</button>
+                <button className="bg-slate-900 text-slate-50 px-3 py-2 rounded-md hover:bg-indigo-900">View Detail</button>
             </div>
         </div>
     </>

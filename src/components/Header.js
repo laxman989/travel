@@ -23,7 +23,7 @@ const Header = () => {
             <div className="h-full flex justify-between items-center px-6 py-3">
                 <div className="flex items-center">
                     <h1 className="text-2xl font-bold mr-4">
-                        <span className="text-3xl text-yellow-500">T</span>ravel
+                        <span className="text-3xl text-yellow-500">T</span>ravel Trips
                     </h1>
 
                     <div className={`hidden md:flex ${isMobileMenuOpen ? 'hidden' : ''}`}>

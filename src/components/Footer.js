@@ -5,7 +5,7 @@ const Footer = () => {
     return <>
     <div className="bg-slate-900 text-slate-50 flex flex-col items-center justify-center px-5 py-10">
       <h1 className="text-2xl font-bold">
-        <span className="text-3xl text-yellow-500">T</span>ravel
+        <span className="text-3xl text-yellow-500">T</span>ravel Trips
       </h1>
       <p className="text-center">Curated Travel Experiences for the Modern Explorer.</p>
       <div className="flex justify-center items-center py-3">
