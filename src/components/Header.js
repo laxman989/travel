@@ -57,7 +57,7 @@ const Header = () => {
                         <h1>{userData.fullName}</h1>
                         <button onClick={() => {setUserData(null); localStorage.removeItem("travelAuthToken")}} className="underline text-teal-900 hover:text-teal-800">Log Out</button>
                     </div>
-                    <div className="bg-teal-900 text-slate-100 font-bold text-2xl w-10 aspect-square rounded-full flex items-center justify-center">{userData.fullName?.charAt(0)}</div>
+                    <div className="bg-teal-900 text-slate-100 font-bold text-2xl w-10 aspect-square rounded-full flex items-center justify-center">{userData.fullName?.charAt(0).toUpperCase()}</div>
                     </div>}
 
                 <RegisterModal isModalOpen={isRegisterModalOpen} closeModal={() => {setIsRegisterModalOpen(false)}} />
