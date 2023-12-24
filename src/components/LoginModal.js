@@ -38,7 +38,7 @@ const LoginModal = ({ isModalOpen, closeModal, userData}) => {
 
     if (!isModalOpen) return null
     return <div className="fixed left-0 top-0 w-screen h-screen bg-slate-900 bg-opacity-50 flex items-center justify-center">
-        <div className="w-[90%] md:w-[50%] bg-slate-50 text-slate-900 rounded-md p-4">
+        <div className="w-[90%] md:w-[50%] bg-slate-100 text-teal-900 rounded-md p-4">
             
             <div className="flex items-center justify-between">
                 <h2 className="font-bold text-2xl">Login</h2>
@@ -59,7 +59,7 @@ const LoginModal = ({ isModalOpen, closeModal, userData}) => {
                             onChange={(e) => {setEmail(e.target.value); setEmailError('')}}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{emailError}</span>
+                        <span className="text-red-500 text-sm">{emailError}</span>
                     </div>
 
                     <div className="mb-4">
@@ -72,10 +72,10 @@ const LoginModal = ({ isModalOpen, closeModal, userData}) => {
                             onChange={(e) => {setPassword(e.target.value); setPasswordError('')}}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{passwordError}</span>
+                        <span className="text-red-500 text-sm">{passwordError}</span>
                     </div>
 
-                    <button type="submit" className="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-indigo-900">
+                    <button type="submit" className="px-4 py-2 bg-teal-900 text-slate-100 rounded-md hover:bg-teal-800">
                         Login
                     </button>
                 </form>

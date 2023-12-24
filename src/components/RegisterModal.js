@@ -5,6 +5,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
     const [formData, setFormData] = useState({
         fullName: "",
         phoneNumber: "",
+        dob: "",
         email: "",
         password: "",
         confirmPassword: ""
@@ -12,6 +13,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
     const [formError, setFormError] = useState({
         fullName: "",
         phoneNumber: "",
+        dob: "",
         email: "",
         password: "",
         confirmPassword: ""
@@ -19,6 +21,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const currentDate = new Date().toISOString().split('T')[0];
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         const newError = {};
 
@@ -27,6 +30,12 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
         } 
         if(!formData.phoneNumber) {
             newError.phoneNumber = "Error: Phone Number is required."  
+        } 
+        if(!formData.dob) {
+            newError.dob = "Error: Date of Birth is required."  
+        } 
+        if(formData.dob > currentDate) {
+            newError.dob = "Error: Date of Birth cannot be in the future."  
         } 
         if(!formData.email) {
             newError.email = "Error: Email is required."
@@ -52,11 +61,12 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
             setFormData({
                 fullName: "",
                 phoneNumber: "",
+                dob: "",
                 email: "",
                 password: "",
                 confirmPassword: ""
             });
-            alert("User registered successfully.");
+            alert("User registered successfully! Login to continue..");
         }
     }
 
@@ -75,7 +85,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
 
     if (!isModalOpen) return null
     return <div className="fixed left-0 top-0 w-screen h-screen bg-slate-900 bg-opacity-50 flex items-center justify-center">
-        <div className="w-[90%] md:w-[50%] bg-slate-50 text-slate-900 rounded-md p-4">
+        <div className="w-[90%] md:w-[50%] bg-slate-100 text-teal-900 rounded-md p-4">
             
             <div className="flex items-center justify-between">
                 <h2 className="font-bold text-2xl">Register</h2>
@@ -96,7 +106,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{formError.fullName}</span>
+                        <span className="text-red-500 text-sm">{formError.fullName}</span>
                     </div>
 
                     <div className="mb-4">
@@ -110,8 +120,22 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{formError.phoneNumber}</span>
+                        <span className="text-red-500 text-sm">{formError.phoneNumber}</span>
                     </div>
+
+                    <div className="mb-4">
+                            <label htmlFor="dob" className="block text-gray-600">Date of Birth</label>
+                            <input
+                                type="date"
+                                id="dob"
+                                name="dob"
+                                value={formData.dob}
+                                onChange={handleChange}
+                                placeholder="DD/MM/YYYY"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
+                            />
+                            <span className="text-red-500 text-sm">{formError.dob}</span>
+                        </div>
 
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-600">Email</label>
@@ -123,7 +147,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{formError.email}</span>
+                        <span className="text-red-500 text-sm">{formError.email}</span>
                     </div>
 
                     <div className="mb-4">
@@ -136,7 +160,7 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{formError.password}</span>
+                        <span className="text-red-500 text-sm">{formError.password}</span>
                     </div>
 
                     <div className="mb-4">
@@ -149,10 +173,10 @@ const RegisterModal = ({ isModalOpen, closeModal}) => {
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-slate-900"
                         />
-                        <span className="text-red-500">{formError.confirmPassword}</span>
+                        <span className="text-red-500 text-sm">{formError.confirmPassword}</span>
                     </div>
 
-                    <button type="submit" className="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-indigo-900">
+                    <button type="submit" className="px-4 py-2 bg-teal-900 text-slate-100 rounded-md hover:bg-teal-800">
                         Register
                     </button>
                 </form>

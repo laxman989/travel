@@ -1,22 +1,3 @@
-const carouselImages = [
-    {
-        id: 1,
-        imageUrl: "https://images.unsplash.com/photo-1530959106156-50f49c30932d?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-        id: 2,
-        imageUrl: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1776&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-        id: 3,
-        imageUrl: "https://images.unsplash.com/photo-1501952476817-d7ae22e8ee4e?auto=format&fit=crop&q=80&w=1769&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-        id: 4,
-        imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=1773&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-];
-
 const packages = [
     {
         id: 1,
@@ -24,7 +5,8 @@ const packages = [
         title: "Italy",
         subTitle: "Italy is great place to visit.",
         price: 300,
-        rating: 3.7
+        rating: 3.7,
+        description: "Embark on an unforgettable journey to Italy, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
     {
         id: 2,
@@ -32,7 +14,8 @@ const packages = [
         title: "Singapore",
         subTitle: "Singapore is great place to visit.",
         price: 260,
-        rating: 2.2
+        rating: 2.2,
+        description: "Embark on an unforgettable journey to Singapore, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
     {
         id: 3,
@@ -40,7 +23,8 @@ const packages = [
         title: "Japan",
         subTitle: "Japan is great place to visit.",
         price: 190,
-        rating: 4.2
+        rating: 4.2,
+        description: "Embark on an unforgettable journey to Japan, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
     {
         id: 4,
@@ -48,7 +32,8 @@ const packages = [
         title: "India",
         subTitle: "India is great place to visit.",
         price: 200,
-        rating: 4.9
+        rating: 4.9,
+        description: "Embark on an unforgettable journey to India, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting. At Travel Trips, excellence is not just a goal; it's a standard. We continuously strive to exceed your expectations by staying ahead of industry trends, partnering with reputable establishments, and leveraging technology to enhance your booking experience."
     },
     {
         id: 5,
@@ -56,7 +41,8 @@ const packages = [
         title: "Australia",
         subTitle: "Australia is great place to visit.",
         price: 360,
-        rating: 4.7
+        rating: 4.7,
+        description: "Embark on an unforgettable journey to Australia, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
     {
         id: 6,
@@ -64,7 +50,8 @@ const packages = [
         title: "Malaysia",
         subTitle: "Malaysia is great place to visit.",
         price: 290,
-        rating: 2.8
+        rating: 2.8,
+        description: "Embark on an unforgettable journey to Malaysia, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting. At Travel Trips, excellence is not just a goal; it's a standard. We continuously strive to exceed your expectations by staying ahead of industry trends, partnering with reputable establishments, and leveraging technology to enhance your booking experience."
     },
     {
         id: 7,
@@ -72,7 +59,8 @@ const packages = [
         title: "Indonesia",
         subTitle: "Indonesia is great place to visit.",
         price: 310,
-        rating: 3.9
+        rating: 3.9,
+        description: "Embark on an unforgettable journey to Indonesia, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
     {
         id: 8,
@@ -80,7 +68,8 @@ const packages = [
         title: "United States",
         subTitle: "United States is great place to visit.",
         price: 460,
-        rating: 4.0
+        rating: 4.0,
+        description: "Embark on an unforgettable journey to United States, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting. At Travel Trips, excellence is not just a goal; it's a standard. We continuously strive to exceed your expectations by staying ahead of industry trends, partnering with reputable establishments, and leveraging technology to enhance your booking experience."
     },
     {
         id: 9,
@@ -88,7 +77,8 @@ const packages = [
         title: "China",
         subTitle: "China is great place to visit.",
         price: 270,
-        rating: 3.4
+        rating: 3.4,
+        description: "Embark on an unforgettable journey to China, where every step unveils a new chapter in a story that spans millennia, leaving travelers with indelible memories of a land that is as diverse as it is enchanting."
     },
 ]
 
@@ -158,7 +148,11 @@ const galleryImages = [
         id: 8,
         imageUrl: "https://images.pexels.com/photos/99551/hot-air-balloon-valley-sky-99551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
+    {
+        id: 9,
+        imageUrl: "https://images.pexels.com/photos/228095/pexels-photo-228095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
     
 ]
 
-export { carouselImages, packages, services, galleryImages};
+export { packages, services, galleryImages};

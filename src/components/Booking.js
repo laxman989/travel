@@ -96,13 +96,13 @@ const Booking = () => {
       };
 
     return <>
-        <section className="py-10 px-5">
+        <section className="py-10 px-5 md:px-20">
             <div className="block md:flex items-start justify-center">
-                <img className="w-[100%] md:w-[50%] aspect-square p-5 md:p-10" src="https://images.pexels.com/photos/1443894/pexels-photo-1443894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="booking-img" />
+                <img className="w-[100%] md:w-[50%] aspect-square p-5 md:p-10" src="https://images.pexels.com/photos/3493804/pexels-photo-3493804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="booking-img" />
                 
 
                 <div id="booking" className="py-10 px-5 w-[100%] md:w-[50%]">
-                    <h1 className="text-3xl text-center font-semibold uppercase pb-5">Booking</h1>
+                    <h1 className="text-3xl text-center font-bold uppercase pb-5 text-teal-900">Booking</h1>
                     
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
@@ -175,7 +175,7 @@ const Booking = () => {
                             <span className="text-red-500">{formError.description}</span>
                         </div>
 
-                        <button type="submit" className="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-indigo-900">
+                        <button type="submit" className="px-4 py-2 bg-teal-900 text-slate-100 rounded-md hover:bg-teal-800">
                             Book
                         </button>
 
